@@ -14,6 +14,7 @@ import {
   getOneBlog,
   updateOneBlog,
 } from "./routes/blog";
+import { existsSync, mkdirSync } from "fs";
 
 const app = express();
 
@@ -25,7 +26,7 @@ app.use(
 
 app.use(multer().any());
 app.use(express.json());
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static("src/uploads"));
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(apispec));
 

@@ -19,7 +19,7 @@ export const createBlog = async (req: Request, res: Response) => {
       const rootFolder = path.join(process.cwd());
       newBlog.mediaLink = `${req.headers.host}/uploads/${uniqueFileName}`;
       fs.writeFile(
-        path.join(rootFolder, "/uploads/" + uniqueFileName),
+        path.join(rootFolder, "/src/uploads/" + uniqueFileName),
         fileData.buffer,
         (err) => {
           if (err) {
@@ -105,7 +105,7 @@ export const updateOneBlog = async (req: Request, res: Response) => {
       const fileName = fileData.originalname;
       const rootFolder = path.join(process.cwd());
 
-      fs.rmSync(path.join(rootFolder, "/uploads" + nameOfOldFile), {
+      fs.rmSync(path.join(rootFolder, "/src/uploads" + nameOfOldFile), {
         force: true,
       });
 
