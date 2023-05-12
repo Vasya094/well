@@ -33,7 +33,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(apispec));
 connect();
 
 if (!existsSync('src/uploads')){
-  mkdirSync('srcuploads');
+  mkdirSync('src/uploads');
 }
 
 app.get("/", (_req: Request, res: Response) => {
@@ -137,7 +137,7 @@ app.post(
     // check if user exists
     const userExists = await UserModel.findOne({ email: email }).lean();
     if (!userExists) {
-      return res.status(400).json({ message: "user_exists" });
+      return res.status(400).json({ message: "user_not_exists" });
     }
 
     // validate the password

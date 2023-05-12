@@ -20,8 +20,8 @@ export async function connect(): Promise<void> {
       mongoose.connection.readyState !== 1 &&
       mongoose.connection.readyState !== 2
     ) {
-      const urlDb =
-        process.env.DB_URL || "mongodb://localhost:27017/ts-tutorial";
+      const urlDb = 'mongodb+srv://rinatkhabib1998:hDDoFezaXmlMlvIv@cluster0.ibmbggo.mongodb.net/'
+        // process.env.DB_URL || "mongodb://localhost:27017/ts-tutorial";
       const conn = await mongoose.connect(urlDb, {
         // <- replace connection string if necessary
         autoIndex: true,
