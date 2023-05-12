@@ -2,7 +2,7 @@
   "name": "typescript-nodemon",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "bin": "bin/createNodetsApp.cjs",
   "repository": "https://github.com/saisilinus/node-express-mongoose-typescript-boilerplate.git",
   "engines": {

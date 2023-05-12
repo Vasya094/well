@@ -3,8 +3,8 @@
   "buildCommand": "npm run build",
   "builds": [
     {
-      "src": "server.js",
-      "use": "@now/node"
+      "src": "./dist/src/server.js",
+      "use": "@vercel/node"
     }
   ],
   "env": {
