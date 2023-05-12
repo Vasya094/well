@@ -6,13 +6,13 @@
       "use": "@vercel/node"
     }
   ],
-  "env": {
-    "DB_URL": "mongodb+srv://rinatkhabib1998:hDDoFezaXmlMlvIv@cluster0.ibmbggo.mongodb.net/"
-  },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "/dist/src/server.js"
     }
-  ]
+  ],
+  "env": {
+    "DB_URL": "mongodb+srv://rinatkhabib1998:hDDoFezaXmlMlvIv@cluster0.ibmbggo.mongodb.net/"
+  }
 }
