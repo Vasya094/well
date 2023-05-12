@@ -1,19 +1,19 @@
 {
-    "version": 2,
-    "buildCommand": "npm run build",
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@now/node"
-      }
-    ],
-    "env": {
-        "DB_URL": "mongodb+srv://rinatkhabib1998:hDDoFezaXmlMlvIv@cluster0.ibmbggo.mongodb.net/",
-      },
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "server.js"
-      }
-    ]
-  }
+  "version": 2,
+  "buildCommand": "npm run build",
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@now/node"
+    }
+  ],
+  "env": {
+    "DB_URL": "mongodb+srv://rinatkhabib1998:hDDoFezaXmlMlvIv@cluster0.ibmbggo.mongodb.net/"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
+}
