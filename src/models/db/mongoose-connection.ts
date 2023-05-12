@@ -20,14 +20,13 @@ export async function connect(): Promise<void> {
       mongoose.connection.readyState !== 1 &&
       mongoose.connection.readyState !== 2
     ) {
-      const conn = await mongoose.connect(
-        "mongodb://localhost:27017/ts-tutorial",
-        {
-          // <- replace connection string if necessary
-          autoIndex: true,
-          serverSelectionTimeoutMS: 5000,
-        }
-      );
+      const urlDb =
+        process.env.DB_URL || "mongodb://localhost:27017/ts-tutorial";
+      const conn = await mongoose.connect(urlDb, {
+        // <- replace connection string if necessary
+        autoIndex: true,
+        serverSelectionTimeoutMS: 5000,
+      });
       mongooseConnection = conn.connection;
     }
   } catch (error) {
