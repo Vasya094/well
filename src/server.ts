@@ -32,6 +32,10 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(apispec));
 
 connect();
 
+if (!existsSync('src/uploads')){
+  mkdirSync('srcuploads');
+}
+
 app.get("/", (_req: Request, res: Response) => {
   res.send("Application works!");
 });
